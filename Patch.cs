@@ -30,11 +30,11 @@ namespace DefaultLaserState
             [HarmonyPrefix]
             static void Prefix(CommonTool __instance, Sync<bool> ____laserEnabled)
             {
-                if (__instance.Slot.ActiveUserRoot.ActiveUser != __instance.LocalUser)
-                    return;
-
                 __instance.RunInUpdates(3, () =>
                 {
+                    if (__instance.Slot.ActiveUser != __instance.LocalUser)
+                        return;
+
                     ____laserEnabled.Value = config.GetValue(LASER_STATE);
                 });
             }
