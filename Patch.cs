@@ -8,7 +8,7 @@ namespace DefaultLaserState
     {
         public override string Name => "DefaultLaserState";
         public override string Author => "LeCloutPanda";
-        public override string Version => "1.0.0";
+        public override string Version => "1.0.1";
 
         public static ModConfiguration config;
 
@@ -27,8 +27,8 @@ namespace DefaultLaserState
         [HarmonyPatch(typeof(CommonTool), "OnAwake")]
         class CommonToolPatch
         {
-            [HarmonyPrefix]
-            static void Prefix(CommonTool __instance, Sync<bool> ____laserEnabled)
+            [HarmonyPostfix]
+            static void Postfix(CommonTool __instance, Sync<bool> ____laserEnabled)
             {
                 __instance.RunInUpdates(3, () =>
                 {
