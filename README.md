@@ -1,5 +1,5 @@
 # DefaultLaserState
- [NeosModLoader](https://github.com/zkxs/NeosModLoader) mod for [Neos](https://neos.com/) that adds a default state to the Interaction Laser with a config option
+[NeosModLoader](https://github.com/zkxs/NeosModLoader) mod for [Neos](https://neos.com/) that adds a default state to the Interaction Laser with a config option
  
 # Installation
 1. Install [NeosModLoader](https://github.com/zkxs/NeosModLoader).
